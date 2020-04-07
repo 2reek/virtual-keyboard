@@ -198,11 +198,7 @@ const specificKeysKeyboard = {
 		}
 	},
 	Ctrl: () => {},
-	win: () => {
-		htmlElements.spanKeys.forEach((span) => {
-			span.classList.add('hidden');
-		});
-	},
+	win: () => {},
 	Alt: () => {},
 
 	'↑': (event) => {
