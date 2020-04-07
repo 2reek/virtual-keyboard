@@ -40,6 +40,7 @@ const eventCodes = {
 	Comma: ',',
 	Period: '.',
 	Slash: '/',
+	Backslash: '\\',
 };
 
 const info =
