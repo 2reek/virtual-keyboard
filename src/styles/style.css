@@ -1,0 +1,143 @@
+.output-container {
+	display: flex;
+	align-items: center;
+	width: 70%;
+	height: 20vw;
+	margin: 5vw auto;
+}
+.textarea {
+	height: 100%;
+	width: 100%;
+}
+.current-languge {
+	position: absolute;
+	transform: translate(65vw, 9vw);
+	font-family: 'Roboto', sans-serif;
+	font-size: 2vw;
+	font-weight: 700;
+	opacity: 0.5;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas: 'row_1' 'row_2' 'row_3' 'row_4' 'row_5';
+	width: 70%;
+	height: 20vw;
+	margin: 5vw auto;
+	border: 3px solid black;
+	border-radius: 5px;
+	background-color: rgb(48, 48, 48);
+}
+
+.row_1 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	/* grid-template-areas: "\` \31  \32  \33  \34  \35  \36 \37  \38  \39  \30  \- \=  \\ backspace"; */
+	grid-area: row_1;
+}
+.row_2 {
+	display: grid;
+	grid-template-columns: 1.3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	/* grid-template-areas: "tab q w e r t y u i o p \[ \] del"; */
+	grid-area: row_2;
+}
+
+.row_3 {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+	grid-template-rows: 1fr;
+	/* grid-template-areas: "capsLock a s d f g h j k l \; ' enter"; */
+	grid-area: row_3;
+}
+
+.row_4 {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+	grid-template-rows: 1fr;
+	/* grid-template-areas: "leftShift  z x c v b n m \, \. \/ up rightShift "; */
+	grid-area: row_4;
+}
+
+.row_5 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 7fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	/* grid-template-areas: "leftAlt wnd leftAlt space rigtAlt left down right rightCtrl"; */
+	grid-area: row_5;
+}
+
+.key {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0.2vw;
+	padding: 0.2vw;
+	/* font-family: 'Roboto', sans-serif; */
+	font-size: 2vw;
+	border: 3px solid rgb(0, 0, 0);
+	border-radius: 3px;
+	color: white;
+	background-color: rgb(36, 36, 36);
+	cursor: pointer;
+}
+
+.key:hover {
+	border: 3px solid rgb(255, 245, 245);
+}
+
+.key:active {
+	animation: pass 0.1s;
+	transform: scale(0.5);
+	border-radius: 50%;
+}
+
+@keyframes click {
+	0% {
+		transform: scale(1);
+		border-radius: 10px;
+	}
+	50% {
+		transform: scale(0.8);
+		border-radius: 20px;
+	}
+	100% {
+		transform: scale(0.3);
+		border-radius: 50%;
+	}
+}
+
+.row {
+	border: none;
+}
+
+.active {
+	background-color: rgb(77, 77, 77);
+	border-color: cadetblue;
+}
+
+.pressed {
+	animation: pass 0.3s;
+	background-color: cornsilk;
+	transform: scale(0.5);
+	border-radius: 50%;
+	color: black;
+}
+
+@keyframes pass {
+	0% {
+		transform: scale(1);
+		border-radius: 10px;
+	}
+	50% {
+		transform: scale(0.8);
+		border-radius: 20px;
+	}
+	100% {
+		transform: scale(0.3);
+		border-radius: 50%;
+	}
+}
