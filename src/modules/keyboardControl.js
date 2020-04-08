@@ -45,7 +45,7 @@ const eventCodes = {
 
 const info =
 	// eslint-disable-next-line max-len
-	'Keyboard created in Windows. To switch the language combination: left ( Shifr + Alt ). Double click on this text to clear LocalStorage and reload page.';
+	'Keyboard created in Windows. To switch the language combination: left ( Alt + Shift ). Double click on this text to clear LocalStorage and reload page.';
 
 const htmlElements = {
 	keyboard: document.querySelector('.grid-container'),
